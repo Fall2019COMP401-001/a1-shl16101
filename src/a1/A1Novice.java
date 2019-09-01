@@ -24,7 +24,7 @@ public class A1Novice {
 			double [] Price = new double[count];
 			
 			double SumOfC1 = 0.0;
-			double SumOfSingleItem = 0;
+			double SumOfSingleItem = 0.0;
 			// define the value of variable sum
 			
 			
