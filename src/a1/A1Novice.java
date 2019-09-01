@@ -48,7 +48,7 @@ public class A1Novice {
 			System.out.println(Result[k]);
 		}
 		
-		
+		//
 		
 		
 	}
