@@ -39,7 +39,7 @@ public class A1Novice {
 				SumOfC1 += SumOfSingleItem;
 			}
 			
-			Result[j] = FirstName + "." + LastName + ": " + SumOfC1;
+			Result[j] = FirstName + ". " + LastName + ": " + SumOfC1;
 			// read the name of customer and printed it with F. Last format
 			
 		}
