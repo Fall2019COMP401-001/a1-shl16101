@@ -71,13 +71,13 @@ public class A1Adept {
 		
 		for(int j = 0; j < NumOfCustomer; j++) {
 			if(TotalSumOfCustomer[j] == max) {
-				System.out.println(NameOfCustomer[j] + " (" + String.format("%.2f", max) + ")");
+				System.out.println("Biggest: " + NameOfCustomer[j] + " (" + String.format("%.2f", max) + ")");
 			}
 		}
 		
 		for(int j = 0; j < NumOfCustomer; j++) {
 			if(TotalSumOfCustomer[j] == min) {
-				System.out.println(NameOfCustomer[j] + " (" + String.format("%.2f", min) + ")");
+				System.out.println("Smallest: " + NameOfCustomer[j] + " (" + String.format("%.2f", min) + ")");
 			}
 		}
 		
