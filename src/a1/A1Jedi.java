@@ -1,6 +1,7 @@
 package a1;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class A1Jedi {
 
@@ -28,6 +29,7 @@ public class A1Jedi {
 		int NumOfCustomer = scan.nextInt();
 		String [] NameOfCustomer = new String[NumOfCustomer];
 		int [] NumOfItemBought = new int[NumOfItem];
+		int [] BoughtOrNot = new int[NumOfItem];
 		int [] NumOfCustomerBought = new int[NumOfItem];
 		int TempSum = 0;
 		
@@ -35,6 +37,7 @@ public class A1Jedi {
 		for(int i = 0; i < NumOfCustomer; i++) {
 			NameOfCustomer[i] = scan.next() + " " + scan.next();
 			int NumOfPurchase = scan.nextInt();
+			Arrays.fill(BoughtOrNot, 10);
 			
 			// read name of customers and number of their purchase
 			
@@ -47,12 +50,17 @@ public class A1Jedi {
 					if(NameOfItem[k].equals(Item)) {
 						TempSum = NumOfSingleItem;
 						NumOfItemBought[k] += TempSum;
-						NumOfCustomerBought[k]++;
-						//System.out.println(TempSum);
-						// check to find the price of the item, than compute the sum
+						BoughtOrNot[k] = 1;
 					}
 				}
 			}
+			
+			for(int l = 0; l < NumOfItem; l++) {
+				if((BoughtOrNot[l] - 1) < 0.05) {
+					NumOfCustomerBought[l] ++;
+				}
+			}
+			
 		}
 		for(int j = 0; j < NumOfItem; j++) {
 			if((NumOfCustomerBought[j] - 0) < 0.05) {
