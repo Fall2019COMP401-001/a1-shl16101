@@ -2,6 +2,7 @@ package a1;
 
 import java.util.Scanner;
 
+
 public class A1Novice {
 
 	public static void main(String[] args) {
@@ -17,14 +18,14 @@ public class A1Novice {
 			
 			String LastName = sc.next(); // LastName
 			
-			int count = sc.nextInt(); // 3
+			int count = sc.nextInt(); // number of item bought
 			
 			// store the number in an array
 			int [] NumberOfPurchase = new int[count];
 			double [] Price = new double[count];
 			
-			double SumOfC1 = 0.00;
-			double SumOfSingleItem = 0.00;
+			double SumOfC = 0;
+			double SumOfSingleItem = 0;
 			// define the value of variable sum
 			
 			
@@ -35,17 +36,17 @@ public class A1Novice {
 				NumberOfPurchase[i] = sc.nextInt();
 				String Fruit = sc.next();
 				Price[i] = sc.nextDouble();
-				SumOfSingleItem = NumberOfPurchase[i] * Price[i];
-				SumOfC1 += SumOfSingleItem;
+				SumOfSingleItem = NumberOfPurchase[i] * Price[i] * 1.00;
+				SumOfC += SumOfSingleItem;
 			}
 			
-			Result[j] = FirstName + ". " + LastName + ": " + SumOfC1;
+			Result[j] = FirstName + ". " + LastName + ": " + String.format("%.2f", SumOfC);
 			// read the name of customer and printed it with F. Last format
 			
 		}
 		
 		for(int k = 0; k < NumOfCustomer; k++) {
-			System.out.println(String.format("%.2f", Result[k]));
+			System.out.println(Result[k]);
 		}
 		
 		//
