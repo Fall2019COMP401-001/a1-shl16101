@@ -56,7 +56,7 @@ public class A1Jedi {
 		}
 		for(int j = 0; j < NumOfItem; j++) {
 			if((NumOfCustomerBought[j] - 0) < 0.05) {
-				System.out.println("No Customers bought " + NameOfItem[j]);
+				System.out.println("No customers bought " + NameOfItem[j]);
 			}else{
 				System.out.println(NumOfCustomerBought[j] + " customers bought " + NumOfItemBought[j] + " " + NameOfItem[j]);
 			}
